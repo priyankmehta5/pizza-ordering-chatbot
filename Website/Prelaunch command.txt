@@ -1,3 +1,0 @@
-Run below command in pycharm to load the bot before launching the index.html file:
-
-rasa run -m models --enable-api --cors "*" --debug
