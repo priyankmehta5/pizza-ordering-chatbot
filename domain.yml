@@ -1,0 +1,40 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- provide_size
+- provide_topping
+- provide_all
+- provide_none
+- provide_only_size
+- provide_only_topping
+entities:
+- size
+- topping
+slots:
+  size:
+    type: text
+  topping:
+    type: text
+responses:
+  utter_greet:
+  - text: Hey there! Welcome to Dominos! How can I assist you?
+  utter_size:
+  - text: What size pizza do you want ?
+  utter_topping:
+  - text: What topping you would like on your pizza ? You can choose any one.
+  utter_pizza:
+  - image: https://content.jdmagicbox.com/comp/thane/u9/022pxx22.xx22.140821182525.m9u9/catalogue/domino-s-pizza-asangaon-thane-pizza-outlets-t08bw.jpg
+    text: You have ordered a {size} {topping} pizza.
+  utter_payment:
+  - text: 'Please make the payment on our secure payments server link: https://www.paypal.com/in/home'
+  utter_bye:
+  - text: Thanks for ordering from Dominos pizza!
+actions:
+- utter_greet
+- utter_size
+- utter_topping
+- utter_pizza
+- utter_payment
+- utter_bye
